@@ -1,0 +1,67 @@
+
+.painel {
+    padding: 20px 0;
+}
+
+.boas-vindas {
+    margin-bottom: 38px;
+    padding: 38px;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background:
+        radial-gradient(ellipse at 90% 20%, rgba(183, 255, 53, 0.12), transparent 35%),
+        #141a16;
+}
+
+.boas-vindas .subtitulo {
+    margin-bottom: 14px;
+}
+
+.boas-vindas h1 {
+    margin-bottom: 14px;
+    overflow-wrap: anywhere;
+    font-size: clamp(30px, 5vw, 44px);
+    letter-spacing: -1.5px;
+}
+
+.boas-vindas > p:last-child {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+}
+
+.painel .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 220px;
+}
+
+.painel .card h2 {
+    font-size: 32px;
+}
+
+.painel .card .botao {
+    margin-top: 20px;
+}
+
+.painel .sair {
+    margin-top: 30px;
+    background: transparent;
+    color: #ffaaa4;
+    border-color: #6a3535;
+}
+
+.painel .sair:hover {
+    background: #351c1c;
+    border-color: #ffaaa4;
+}
+
+@media (max-width: 800px) {
+    .painel .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .boas-vindas {
+        padding: 28px 22px;
+    }
+}

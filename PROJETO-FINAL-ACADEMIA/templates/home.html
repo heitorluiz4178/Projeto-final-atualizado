@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+
+{% block title %}Painel | FitLife Academia{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="painel">
+    <div class="boas-vindas">
+        <p class="subtitulo">ÁREA DO ALUNO</p>
+        <h1>Olá, {{ user.name }}!</h1>
+        <p>Que bom ter você de volta. Continue focado nos seus objetivos.</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h2>💪</h2>
+            <h3>Seu treinamento</h3>
+            <p>Prepare-se para mais um dia de evolução.</p>
+        </div>
+
+        <div class="card">
+            <h2>🎯</h2>
+            <h3>Seus objetivos</h3>
+            <p>Mantenha a disciplina e siga em frente.</p>
+        </div>
+
+        <div class="card">
+            <h2>👤</h2>
+            <h3>Minha conta</h3>
+            <p>Consulte e atualize seus dados cadastrais.</p>
+            <a href="{{ url_for('perfil') }}" class="botao">Editar perfil</a>
+        </div>
+    </div>
+
+    <a href="{{ url_for('logout') }}" class="botao sair">Sair da conta</a>
+</section>
+{% endblock %}
+

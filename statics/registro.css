@@ -1,0 +1,58 @@
+.mensagem {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.mensagem.error {
+    background-color: #ffe5e5;
+    color: #b00020;
+    border: 1px solid #ffb3b3;
+}
+
+.mensagem.success {
+    background-color: #e5ffe9;
+    color: #176b2c;
+    border: 1px solid #a8e6b1;
+}
+.form-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.form-card {
+    max-width: 500px;
+}
+
+.form-card h1 {
+    color: var(--texto);
+}
+
+.form-card form {
+    gap: 0;
+}
+
+.form-card input {
+    min-height: 48px;
+}
+
+.form-card form .botao {
+    min-height: 49px;
+}
+
+.form-card hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid var(--borda);
+}
+
+.form-card h3 {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.form-card h3 + p {
+    margin-top: 10px;
+    line-height: 1.7;
+}

@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FitLife Academia{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="{{ url_for('index') }}" class="logo">Fit<span>Life</span></a>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+
+            {% if session.get('usuario_id') %}
+                <a href="{{ url_for('home') }}">Painel</a>
+                <a href="{{ url_for('perfil') }}">Meu perfil</a>
+                <a href="{{ url_for('logout') }}">Sair</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Entrar</a>
+                <a href="{{ url_for('registro') }}">Cadastrar</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 FitLife Academia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

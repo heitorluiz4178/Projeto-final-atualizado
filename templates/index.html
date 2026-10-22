@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+
+{% block title %}Início | FitLife Academia{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <p class="subtitulo">SUA MELHOR VERSÃO COMEÇA AQUI</p>
+
+        <h1>Transforme seu corpo.<br>
+            <span>Supere seus limites.</span>
+        </h1>
+
+        <p>
+            Cuide da sua saúde, conquiste seus objetivos e tenha
+            uma vida mais ativa com a FitLife Academia.
+        </p>
+
+        <div class="botoes">
+            <a href="{{ url_for('registro') }}" class="botao">Criar minha conta</a>
+            <a href="{{ url_for('login') }}" class="botao secundario">Já tenho cadastro</a>
+        </div>
+    </div>
+</section>
+
+<section class="beneficios">
+    <h2>Por que escolher a FitLife?</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>💪 Treine melhor</h3>
+            <p>Organize sua experiência e acompanhe sua jornada fitness.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Tenha objetivos</h3>
+            <p>Mantenha o foco e trabalhe diariamente para evoluir.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Evolua sempre</h3>
+            <p>Construa hábitos saudáveis e supere seus próprios limites.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

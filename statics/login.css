@@ -1,0 +1,95 @@
+
+.form-container {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 470px;
+    padding: 38px;
+    background:
+        radial-gradient(ellipse at top right, rgba(183, 255, 53, 0.06), transparent 45%),
+        var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.form-card h1 {
+    margin-bottom: 12px;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.form-card > p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+}
+
+.form-card label {
+    margin: 17px 0 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #e4eae5;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 14px 15px;
+    color: var(--texto);
+    background: #0d120f;
+    border: 1px solid #303b33;
+    border-radius: 9px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-card input::placeholder {
+    color: #68736b;
+}
+
+.form-card input:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(183, 255, 53, 0.1);
+}
+
+.form-card form .botao {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.form-card .form-link {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+.form-card .form-link a {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.form-card .form-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+    .form-card {
+        padding: 26px 20px;
+    }
+
+    .form-card h1 {
+        font-size: 26px;
+    }
+}
